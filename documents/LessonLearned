@@ -4,9 +4,19 @@ If bindException:
 taskkill /F /PID <pid number>
 
 mvn jetty:run
+mvn clean
+mvn package
 
 initial import of files
 Adjust the pom.xml to your liking. You probably want to change the artifact and group id’s.
 Run “mvn clean” to create a clean project with the dependencies in the right location.
 Run “mvn eclipse:eclipse” to generate the Eclipse configuration files.
 Import the project into Eclipse (or you can use the m2eclipse Maven integration if you like)
+
+git initialization in github: [https://help.github.com/articles/create-a-repo]
+git config --global user.name "Your Name Here"
+git config --global user.email "your_email@example.com"
+email address for Git should be the same one associated with your GitHub account. 
+git init
+git remote add origin https://github.com/username/<projectName>.git
+git push origin master
