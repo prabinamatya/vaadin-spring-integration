@@ -18,5 +18,13 @@ git config --global user.name "Your Name Here"
 git config --global user.email "your_email@example.com"
 email address for Git should be the same one associated with your GitHub account. 
 git init
-git remote add origin https://github.com/username/<projectName>.git
+git remote add origin https://github.com/username/<projectName>.git  or
+git remote set-url origin git@github.com:user/repo.git
 git push origin master
+
+aliasing   - [http://cheat.errtheblog.com/s/git]
+	go to cd ~
+	vi .gitconfig
+	[alias]
+		st = status
+		
