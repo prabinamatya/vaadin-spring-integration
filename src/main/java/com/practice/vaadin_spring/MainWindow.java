@@ -1,8 +1,11 @@
 
 package com.practice.vaadin_spring;
 
+import com.vaadin.ui.Button;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Window;
+import com.vaadin.ui.Button.ClickEvent;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -21,10 +24,21 @@ public class MainWindow extends Window {
 
     public MainWindow() {
         super(VaadinSpringDemoApplication.APPLICATION_TITLE);
-
+        
         instanceId++;
 
         addComponent(new Label(VaadinSpringDemoApplication.APPLICATION_TITLE));
+        
+        final Button button = new Button("Don't Click");
+        button.addListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				button.setCaption("I told you not to click");
+			}
+		});
+        
+        addComponent(button);
     }
 
     @PostConstruct

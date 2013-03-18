@@ -1,0 +1,12 @@
+Lessons learned:
+If bindException:
+- netstat -ao
+taskkill /F /PID <pid number>
+
+mvn jetty:run
+
+initial import of files
+Adjust the pom.xml to your liking. You probably want to change the artifact and group id’s.
+Run “mvn clean” to create a clean project with the dependencies in the right location.
+Run “mvn eclipse:eclipse” to generate the Eclipse configuration files.
+Import the project into Eclipse (or you can use the m2eclipse Maven integration if you like)
