@@ -1,6 +1,7 @@
 
 package com.practice.vaadin_spring;
 
+import com.practice.vaadin_spring.Table.StudentDetailTable;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Window;
@@ -18,6 +19,7 @@ public class MainWindow extends Window {
     private static final long serialVersionUID = 1L;
 
     private static int instanceId = 0;
+    private StudentDetailTable student;
 
     @Autowired
     private TextLabelService textLabelService;
@@ -26,6 +28,7 @@ public class MainWindow extends Window {
         super(VaadinSpringDemoApplication.APPLICATION_TITLE);
         
         instanceId++;
+        StudentDetailTable student = new StudentDetailTable();
 
         addComponent(new Label(VaadinSpringDemoApplication.APPLICATION_TITLE));
         
@@ -35,10 +38,13 @@ public class MainWindow extends Window {
 			@Override
 			public void buttonClick(ClickEvent event) {
 				button.setCaption("I told you not to click");
+				
 			}
 		});
         
+       
         addComponent(button);
+        addComponent(student);
     }
 
     @PostConstruct
