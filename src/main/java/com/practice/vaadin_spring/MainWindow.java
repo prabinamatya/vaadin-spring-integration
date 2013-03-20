@@ -4,6 +4,7 @@ package com.practice.vaadin_spring;
 import com.practice.vaadin_spring.Table.StudentDetailTable;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Label;
+import com.vaadin.ui.Table;
 import com.vaadin.ui.Window;
 import com.vaadin.ui.Button.ClickEvent;
 
@@ -28,18 +29,16 @@ public class MainWindow extends Window {
         super(VaadinSpringDemoApplication.APPLICATION_TITLE);
         
         instanceId++;
-        StudentDetailTable student = new StudentDetailTable();
+        student = new StudentDetailTable();
 
         addComponent(new Label(VaadinSpringDemoApplication.APPLICATION_TITLE));
         
         final Button button = new Button("Don't Click");
         button.addListener(new Button.ClickListener() {
-			
 			@Override
 			public void buttonClick(ClickEvent event) {
 				button.setCaption("I told you not to click");
-				
-			}
+				}
 		});
         
        

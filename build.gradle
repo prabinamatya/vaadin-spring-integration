@@ -1,0 +1,10 @@
+apply plugin: 'java'
+sourceSets {
+	src {
+		main {
+			java {
+				
+			}
+		}
+	}
+}
