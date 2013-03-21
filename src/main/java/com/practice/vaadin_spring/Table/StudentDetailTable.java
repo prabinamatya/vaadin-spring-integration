@@ -39,7 +39,7 @@ public class StudentDetailTable extends Table{
 		table.addItem(new Object[] {
 		    "Isaac",   "Newton",    new Integer(1643)}, new Integer(6));*/
 		
-		Table table = new Table();
+		/*Table table = new Table();
 		
 		IndexedContainer cont = new IndexedContainer();
 		cont.addContainerProperty("property1", String.class, "");
@@ -52,7 +52,7 @@ public class StudentDetailTable extends Table{
 			cont.getContainerProperty(i, "property2").setValue("Item "+i);
 			cont.getContainerProperty(i, "property3").setValue("Item "+i);
 		}
-		table.setContainerDataSource(cont);
+		table.setContainerDataSource(cont);*/
 		
 	}
 	
