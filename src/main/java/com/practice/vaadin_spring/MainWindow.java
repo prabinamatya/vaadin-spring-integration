@@ -24,7 +24,8 @@ public class MainWindow extends Window {
 
     private static int instanceId = 0;
     final Button button;
-//    private StudentDetailTable student;
+    
+    private StudentDetailTable student;
 
     @Autowired
     private TextLabelService textLabelService;
@@ -33,7 +34,7 @@ public class MainWindow extends Window {
         super(VaadinSpringDemoApplication.APPLICATION_TITLE);
         
         instanceId++;
-//        student = new StudentDetailTable();
+        student = new StudentDetailTable();
 
         addComponent(new Label(VaadinSpringDemoApplication.APPLICATION_TITLE));
         
