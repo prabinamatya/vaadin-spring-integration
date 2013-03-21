@@ -8,9 +8,9 @@ mvn clean
 mvn package
 
 initial import of files
-Adjust the pom.xml to your liking. You probably want to change the artifact and group id’s.
-Run “mvn clean” to create a clean project with the dependencies in the right location.
-Run “mvn eclipse:eclipse” to generate the Eclipse configuration files.
+Adjust the pom.xml to your liking. You probably want to change the artifact and group idï¿½s.
+Run ï¿½mvn cleanï¿½ to create a clean project with the dependencies in the right location.
+Run ï¿½mvn eclipse:eclipseï¿½ to generate the Eclipse configuration files.
 Import the project into Eclipse (or you can use the m2eclipse Maven integration if you like)
 
 git initialization in github: [https://help.github.com/articles/create-a-repo]
@@ -27,4 +27,6 @@ aliasing   - [http://cheat.errtheblog.com/s/git]
 	vi .gitconfig
 	[alias]
 		st = status
+
+apache axis has wsdl2java and java2wsdl not in cxf
 		
