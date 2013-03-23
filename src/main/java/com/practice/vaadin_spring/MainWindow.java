@@ -1,7 +1,7 @@
 
 package com.practice.vaadin_spring;
 
-import com.practice.vaadin_spring.Table.StudentDetailTable;
+import com.practice.components.StudentDetailTable;
 import com.vaadin.data.Item;
 import com.vaadin.data.util.IndexedContainer;
 import com.vaadin.event.ItemClickEvent;
@@ -46,41 +46,9 @@ public class MainWindow extends Window {
 				}
 		});
         
-       
         addComponent(button);
-//        addComponent(student);
-        
-        Table table = createTable1();
-		
-		addComponent(table);
+        addComponent(student);
     }
-
-	private Table createTable1() {
-		Table table = new Table();
-		setTableProperties(table);
-		
-		IndexedContainer cont = new IndexedContainer();
-		cont.addContainerProperty("property1", String.class, "");
-		cont.addContainerProperty("property2", String.class, "");
-		cont.addContainerProperty("property3", String.class, "");
-		
-		for(int i = 0; i < 1000; i++) {
-			cont.addItem(i);
-			cont.getContainerProperty(i, "property1").setValue("Item "+i);
-			cont.getContainerProperty(i, "property2").setValue("Item "+i);
-			cont.getContainerProperty(i, "property3").setValue("Item "+i);
-		}
-		table.setContainerDataSource(cont);
-		
-		table.addListener(new ItemClickEvent.ItemClickListener() {
-			
-			@Override
-			public void itemClick(ItemClickEvent event) {
-				button.setCaption("row got clicked");
-			}
-		});
-		return table;
-	}
 
 	private void setTableProperties(Table table) {
 		table.setSizeFull();
