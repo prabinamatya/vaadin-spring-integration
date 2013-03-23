@@ -1,21 +1,19 @@
 
 package com.practice.vaadin_spring;
 
-import com.practice.components.StudentDetailTable;
-import com.vaadin.data.Item;
-import com.vaadin.data.util.IndexedContainer;
-import com.vaadin.event.ItemClickEvent;
-import com.vaadin.ui.Button;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.Table;
-import com.vaadin.ui.Window;
-import com.vaadin.ui.Button.ClickEvent;
+import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
+import com.practice.components.LoginPage;
+import com.practice.components.StudentDetailTable;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Button.ClickEvent;
+import com.vaadin.ui.Label;
+import com.vaadin.ui.Table;
+import com.vaadin.ui.Window;
 
 @Component
 @Scope("session")
@@ -26,6 +24,7 @@ public class MainWindow extends Window {
     final Button button;
     
     private StudentDetailTable student;
+    private LoginPage loginPage;
 
     @Autowired
     private TextLabelService textLabelService;
@@ -35,6 +34,7 @@ public class MainWindow extends Window {
         
         instanceId++;
         student = new StudentDetailTable();
+        loginPage = new LoginPage();
 
         addComponent(new Label(VaadinSpringDemoApplication.APPLICATION_TITLE));
         
@@ -43,11 +43,12 @@ public class MainWindow extends Window {
 			@Override
 			public void buttonClick(ClickEvent event) {
 				button.setCaption("I told you not to click");
-				}
+			}
 		});
         
         addComponent(button);
         addComponent(student);
+        addComponent(loginPage);
     }
 
 	private void setTableProperties(Table table) {
