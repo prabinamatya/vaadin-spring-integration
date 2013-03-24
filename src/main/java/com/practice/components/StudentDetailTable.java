@@ -6,6 +6,7 @@ import com.vaadin.ui.Table;
 public class StudentDetailTable extends Table{
 	
 	public StudentDetailTable() {
+		removeAllItems();
 		rebuild();
 	}
 
