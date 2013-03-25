@@ -4,6 +4,8 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
 import com.practice.components.StudentDetailTable;
+import com.practice.components.forms.LoginForm;
+
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
@@ -56,6 +58,7 @@ public class LoginPage extends Panel{
 				table = new StudentDetailTable();
 				loginButton.setCaption("login button got clicked");
 			}
+			
 		});
 		
 		Button forgotButton = new Button("Forgot Password");
@@ -68,7 +71,8 @@ public class LoginPage extends Panel{
 
 		Button registerButton = new Button("Register");
 		vLayout.addComponent(registerButton);
-		
+		LoginForm loginForm = new LoginForm();
+		vLayout.addComponent(loginForm);
 		addComponent(vLayout);
 	}
 	
