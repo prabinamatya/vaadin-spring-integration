@@ -30,3 +30,32 @@ aliasing   - [http://cheat.errtheblog.com/s/git]
 
 apache axis has wsdl2java and java2wsdl not in cxf
 		
+using ssh for github: [https://help.github.com/articles/generating-ssh-keys]
+cd ~/.ssh
+ssh-keygen -t rsa -C "your_email@example.com"
+do passphrase
+clip < ~/.ssh/id_rsa.pub
+add key from account setttings
+ssh -T git@github.com --> to test
+
+/*	private Component generateContent() {
+		CustomLayout pageBodyLayout;
+		pageBodyLayout = generateLayout();
+		pageBodyLayout.addComponent(generateLogin(), "loginLayout");
+		return pageBodyLayout;
+	}*/
+	/*	private CustomLayout generateLayout() {
+		String loginLayoutString = "<div class ='loginLayout' style='float:center'>" +
+							"<div location ='centerLogin'/>" +
+							"</div>";
+		CustomLayout loginLayoutPage = null;
+		try {
+			loginLayoutPage = new CustomLayout(new ByteArrayInputStream(loginLayoutString.getBytes()));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return loginLayoutPage;
+	}*/
+	
+XULRunner issue: ["Could not start XULRunner (version 1.9 or higher required)", ]
+http://sourceforge.net/projects/xulrunnerinstal/ 
