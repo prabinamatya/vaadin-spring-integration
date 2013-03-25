@@ -37,3 +37,6 @@ do passphrase
 clip < ~/.ssh/id_rsa.pub
 add key from account setttings
 ssh -T git@github.com --> to test
+
+XULRunner issue: ["Could not start XULRunner (version 1.9 or higher required)", ]
+http://sourceforge.net/projects/xulrunnerinstal/ 
