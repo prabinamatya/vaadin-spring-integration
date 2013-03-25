@@ -37,3 +37,22 @@ do passphrase
 clip < ~/.ssh/id_rsa.pub
 add key from account setttings
 ssh -T git@github.com --> to test
+
+/*	private Component generateContent() {
+		CustomLayout pageBodyLayout;
+		pageBodyLayout = generateLayout();
+		pageBodyLayout.addComponent(generateLogin(), "loginLayout");
+		return pageBodyLayout;
+	}*/
+	/*	private CustomLayout generateLayout() {
+		String loginLayoutString = "<div class ='loginLayout' style='float:center'>" +
+							"<div location ='centerLogin'/>" +
+							"</div>";
+		CustomLayout loginLayoutPage = null;
+		try {
+			loginLayoutPage = new CustomLayout(new ByteArrayInputStream(loginLayoutString.getBytes()));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return loginLayoutPage;
+	}*/

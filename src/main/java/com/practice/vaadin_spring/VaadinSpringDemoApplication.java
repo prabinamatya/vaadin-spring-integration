@@ -4,20 +4,20 @@ package com.practice.vaadin_spring;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
+import com.practice.pages.LoginPage;
 import com.vaadin.Application;
+import com.vaadin.ui.Window;
 
 @Configurable
 public class VaadinSpringDemoApplication extends Application {
-    private static final long serialVersionUID = 1L;
 
-    public static final String APPLICATION_TITLE = "Vaading-Spring Demo";
-
-    @Autowired
-    private MainWindow mainWindow;
-
+    private Window window;
+    
     @Override
     public void init() {
-        setMainWindow(mainWindow);
+    	window = new Window("Login Page", new LoginPage());
+    	window.center();
+    	setMainWindow(window);
     }
 
 }
