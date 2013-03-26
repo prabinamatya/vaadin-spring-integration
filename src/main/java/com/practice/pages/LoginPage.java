@@ -1,14 +1,7 @@
 package com.practice.pages;
 
-<<<<<<< HEAD
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
 
-import com.practice.components.StudentDetailTable;
 import com.practice.components.forms.LoginForm;
-
-=======
->>>>>>> e531f573d3e8b9d2254e0f47e17d1f473ba95a75
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
@@ -59,13 +52,13 @@ public class LoginPage extends VerticalLayout{
 		addComponent(passhLayout);
 		addComponent(buttonLayout);
 
-		Button registerButton = new Button("Register");
+		
 
 		LoginForm loginForm = new LoginForm();
 		addComponent(loginForm);
 		addComponent(vLayout);
 
-		addComponent(registerButton);
+		
 		
 
 	}
