@@ -1,0 +1,24 @@
+    public boolean containsDuplicates(List<Integer> listContainingDuplicates)
+    {
+        final Set<Integer> set1 = new HashSet();
+        for (Integer yourInt : listContainingDuplicates) {
+            if(!set1.contains(yourInt)) {
+                set1.add(yourInt);
+            } else {
+                return false;
+            }
+        }
+
+        return true;
+    }
+    
+    
+    public class SetPracticeTest {
+    @org.junit.Test
+    public void testFindDuplicates() throws Exception {
+      SetPractice testO = new SetPractice();
+        boolean duplicates = testO.containsDuplicates(Arrays.asList(1, 1, 2, 3, 5, 5));
+        System.out.println(duplicates);
+
+    }
+}
